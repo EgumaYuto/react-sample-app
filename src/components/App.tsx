@@ -1,9 +1,43 @@
 import * as React from "react";
 
-export interface AppProps { compiler: string; framework: string; }
+export interface AppProps { }
 
 export class App extends React.Component<AppProps, {}> {
   render() {
-      return <h1>Hello {this.props.compiler} and {this.props.framework}!</h1>;
+      return (
+          <div>
+              <h1>React Sample App</h1>
+              <form>
+                  <textarea />
+                  <button type={"submit"} >Submit</button>
+              </form>
+              <ul>
+                  <li>
+                      <form>
+                          <label>
+                            <input type={"checkbox"} />
+                            Todo
+                          </label>
+                      </form>
+                  </li>
+                  <li>
+                      <form>
+                          <label>
+                            <input type={"checkbox"} />
+                            Todo
+                          </label>
+                      </form>
+                  </li>
+                  <li>
+                      <form>
+                          <label>
+                            <input type={"checkbox"} />
+                            Todo
+                          </label>
+                      </form>
+                  </li>
+              </ul>
+          </div>
+      );
   }
 }
