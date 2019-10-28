@@ -31,12 +31,12 @@ module.exports = {
         extensions: ['.tsx', '.js', '.ts', 'json']
     },
     output: {
-      path: path.resolve(__dirname, 'dist'),
-      publicPath: '/',
-      filename: 'bundle.js'
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/',
+        filename: 'bundle.js'
     },
     devtool: "source-map",
     devServer: {
-      contentBase: './dist'
+        contentBase: './dist'
     }
-  };
+};
