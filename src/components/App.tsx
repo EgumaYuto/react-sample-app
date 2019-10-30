@@ -1,4 +1,6 @@
 import * as React from "react";
+import {TodoList} from "./TodoList";
+import {TodoForm} from "./TodoForm";
 
 export interface AppProps { }
 
@@ -7,36 +9,8 @@ export class App extends React.Component<AppProps, {}> {
       return (
           <div>
               <h1>React Sample App</h1>
-              <form>
-                  <textarea />
-                  <button type={"submit"} >Submit</button>
-              </form>
-              <ul>
-                  <li>
-                      <form>
-                          <label>
-                            <input type={"checkbox"} />
-                            Todo
-                          </label>
-                      </form>
-                  </li>
-                  <li>
-                      <form>
-                          <label>
-                            <input type={"checkbox"} />
-                            Todo
-                          </label>
-                      </form>
-                  </li>
-                  <li>
-                      <form>
-                          <label>
-                            <input type={"checkbox"} />
-                            Todo
-                          </label>
-                      </form>
-                  </li>
-              </ul>
+              <TodoForm />
+              <TodoList />
           </div>
       );
   }
