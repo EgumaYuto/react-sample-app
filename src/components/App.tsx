@@ -1,16 +1,12 @@
 import * as React from "react";
 import {TodoList} from "./TodoList";
 import {TodoForm} from "./TodoForm";
+import {TodoViewModel} from "./TodoViewModel";
 
 interface AppProps {}
 
 interface AppState {
     todoList: Array<TodoViewModel>
-}
-
-export interface TodoViewModel {
-    id: string
-    title: string
 }
 
 export class App extends React.Component<AppProps, AppState> {

@@ -1,6 +1,7 @@
 import * as React from "react";
 import {Todo} from "./Todo";
-import {TodoViewModel} from "./App";
+import {TodoViewModel} from "./TodoViewModel";
+
 
 interface Props {
     todoList: Array<TodoViewModel>

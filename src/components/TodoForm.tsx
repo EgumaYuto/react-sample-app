@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ShortId from "shortid";
-import {TodoViewModel} from "./App";
+import {TodoViewModel} from "./TodoViewModel";
+
 
 interface Props {
     onTodoSubmit: (todo: TodoViewModel) => void

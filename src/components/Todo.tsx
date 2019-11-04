@@ -1,5 +1,5 @@
 import * as React from "react";
-import {TodoViewModel} from "./App";
+import {TodoViewModel} from "./TodoViewModel";
 
 interface Props {
     todo: TodoViewModel
