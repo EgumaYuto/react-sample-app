@@ -18,7 +18,6 @@ export class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
       super(props);
       this.state = {todoList: []};
-      console.log(this.state);
   }
 
   addTodo = (todo: TodoViewModel): void => {
