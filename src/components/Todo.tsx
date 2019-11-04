@@ -6,13 +6,6 @@ interface Props {
 
 export class Todo extends React.Component<Props> {
 
-    constructor(props: Props) {
-        super(props);
-        this.state = {
-            title: props.title
-        }
-    }
-
     render() {
        return (
            <form>
