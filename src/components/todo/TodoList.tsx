@@ -1,6 +1,7 @@
 import * as React from "react";
 import {TodoItem} from "./TodoItem";
 import {TodoViewModel} from "./TodoViewModel";
+import {List} from "semantic-ui-react";
 
 
 interface Props {
@@ -12,17 +13,17 @@ export class TodoList extends React.Component<Props> {
 
     render() {
         return (
-            <ul>
+            <List>
                 {
                     this.props.todoList.map((todo) => {
                         return (
-                            <li key={todo.id}>
+                            <List.Item key={todo.id}>
                                 <TodoItem todo={todo} handleRemove={this.props.removeTodo} />
-                            </li>
+                            </List.Item>
                         );
                     })
                 }
-            </ul>
+            </List>
         )
     }
 }

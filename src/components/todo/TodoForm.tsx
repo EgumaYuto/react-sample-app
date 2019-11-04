@@ -1,6 +1,7 @@
 import * as React from "react";
 import * as ShortId from "shortid";
 import {TodoViewModel} from "./TodoViewModel";
+import {Button, Input} from "semantic-ui-react";
 
 
 interface Props {
@@ -36,9 +37,9 @@ export class TodoForm extends React.Component<Props, State> {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input type={"text"} value={this.state.title} onChange={this.handleInput} />
-                <button type={"submit"}>Button</button>
+            <form action={"#"} onSubmit={this.handleSubmit}>
+                <Input type={"text"} value={this.state.title} onChange={this.handleInput} />
+                <Button type={"submit"}>Button</Button>
             </form>
         )
     }
