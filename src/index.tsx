@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { TodoComponents } from './components/todo/TodoComponents';
+import { TodoComponent } from './components/todo/TodoComponent';
 
 ReactDOM.render(
-  <TodoComponents />,
+  <TodoComponent />,
   document.getElementById('app')
 );
 

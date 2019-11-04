@@ -3,15 +3,13 @@ import {TodoList} from "./TodoList";
 import {TodoForm} from "./TodoForm";
 import {TodoViewModel} from "./TodoViewModel";
 
-interface AppProps {}
-
-interface AppState {
+interface TodoState {
     todoList: Array<TodoViewModel>
 }
 
-export class TodoComponents extends React.Component<AppProps, AppState> {
+export class TodoComponent extends React.Component<{}, TodoState> {
 
-  constructor(props: AppProps) {
+  constructor(props: {}) {
       super(props);
       this.state = {todoList: []};
   }
