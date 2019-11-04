@@ -9,7 +9,7 @@ interface AppState {
     todoList: Array<TodoViewModel>
 }
 
-export class App extends React.Component<AppProps, AppState> {
+export class TodoComponents extends React.Component<AppProps, AppState> {
 
   constructor(props: AppProps) {
       super(props);

@@ -6,7 +6,7 @@ interface Props {
     handleRemove: (id: string) => void
 }
 
-export class Todo extends React.Component<Props> {
+export class TodoItem extends React.Component<Props> {
 
     handleRemove = () => {
         this.props.handleRemove(this.props.todo.id);

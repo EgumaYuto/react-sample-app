@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Todo} from "./Todo";
+import {TodoItem} from "./TodoItem";
 import {TodoViewModel} from "./TodoViewModel";
 
 
@@ -17,7 +17,7 @@ export class TodoList extends React.Component<Props> {
                     this.props.todoList.map((todo) => {
                         return (
                             <li key={todo.id}>
-                                <Todo todo={todo} handleRemove={this.props.removeTodo} />
+                                <TodoItem todo={todo} handleRemove={this.props.removeTodo} />
                             </li>
                         );
                     })
