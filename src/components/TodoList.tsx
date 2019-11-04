@@ -7,13 +7,13 @@ export class TodoList extends React.Component {
         return (
             <ul>
                 <li>
-                    <Todo />
+                    <Todo title={"Todo1"} />
                 </li>
                 <li>
-                    <Todo />
+                    <Todo title={"Todo2"} />
                 </li>
                 <li>
-                    <Todo />
+                    <Todo title={"Todo3"} />
                 </li>
             </ul>
         )
