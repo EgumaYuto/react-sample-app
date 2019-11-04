@@ -38,7 +38,7 @@ export class App extends React.Component<AppProps, AppState> {
   render() {
       return (
           <div>
-              <h1>React Sample App</h1>
+              <h1>React Todo App</h1>
               <TodoForm onTodoSubmit={this.addTodo} />
               <TodoList todoList={this.state.todoList} removeTodo={this.removeTodo} />
           </div>
