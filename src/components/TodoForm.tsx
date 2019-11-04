@@ -1,9 +1,22 @@
 import * as React from "react";
+import * as ShortId from "shortid";
+import {TodoViewModel} from "./App";
 
-export class TodoForm extends React.Component {
+interface Props {
+    onTodoSubmit: (todo: TodoViewModel) => void
+}
 
-    handleSubmit() {
-        console.log('The link was clicked.');
+export class TodoForm extends React.Component<Props> {
+
+    constructor(props: Props) {
+        super(props);
+    }
+
+    handleSubmit = (): void => {
+        this.props.onTodoSubmit({
+            id: ShortId.generate(),
+            title: 'Added TODO'
+        });
     };
 
     render() {
