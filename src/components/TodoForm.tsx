@@ -18,6 +18,10 @@ export class TodoForm extends React.Component<Props, State> {
     }
 
     handleSubmit = (): void => {
+        const title = this.state.title.trim();
+        if (!title) {
+            return;
+        }
         this.props.onTodoSubmit({
             id: ShortId.generate(),
             title: this.state.title
