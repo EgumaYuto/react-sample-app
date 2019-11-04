@@ -29,12 +29,19 @@ export class App extends React.Component<AppProps, AppState> {
       });
   };
 
+  removeTodo = (id: string): void => {
+      const todoList: Array<TodoViewModel> = this.state.todoList;
+      this.setState({
+          todoList: todoList.filter(todo => todo.id != id)
+      });
+  };
+
   render() {
       return (
           <div>
               <h1>React Sample App</h1>
               <TodoForm onTodoSubmit={this.addTodo} />
-              <TodoList todoList={this.state.todoList} />
+              <TodoList todoList={this.state.todoList} removeTodo={this.removeTodo} />
           </div>
       );
   }

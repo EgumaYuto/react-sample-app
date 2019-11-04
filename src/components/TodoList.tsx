@@ -1,11 +1,10 @@
 import * as React from "react";
 import {Todo} from "./Todo";
+import {TodoViewModel} from "./App";
 
 interface Props {
-    todoList: Array<{
-        id: string
-        title: string
-    }>
+    todoList: Array<TodoViewModel>
+    removeTodo: (id: string) => void
 }
 
 export class TodoList extends React.Component<Props> {
@@ -17,7 +16,7 @@ export class TodoList extends React.Component<Props> {
                     this.props.todoList.map((todo) => {
                         return (
                             <li key={todo.id}>
-                                <Todo title={todo.title} />
+                                <Todo todo={todo} handleRemove={this.props.removeTodo} />
                             </li>
                         );
                     })

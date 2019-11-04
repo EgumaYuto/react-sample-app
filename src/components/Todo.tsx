@@ -1,17 +1,23 @@
 import * as React from "react";
+import {TodoViewModel} from "./App";
 
 interface Props {
-    title: string
+    todo: TodoViewModel
+    handleRemove: (id: string) => void
 }
 
 export class Todo extends React.Component<Props> {
+
+    handleRemove = () => {
+        this.props.handleRemove(this.props.todo.id);
+    };
 
     render() {
        return (
            <form>
                <label>
-                   <input type={"checkbox"} />
-                   { this.props.title }
+                   <input type={"checkbox"} onChange={this.handleRemove} />
+                   {this.props.todo.title}
                </label>
            </form>
        )
