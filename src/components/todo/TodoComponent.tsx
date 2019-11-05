@@ -2,6 +2,7 @@ import * as React from "react";
 import {TodoList} from "./TodoList";
 import {TodoForm} from "./TodoForm";
 import {TodoViewModel} from "./TodoViewModel";
+import {Container} from "semantic-ui-react";
 
 interface TodoState {
     todoList: Array<TodoViewModel>
@@ -31,11 +32,11 @@ export class TodoComponent extends React.Component<{}, TodoState> {
 
   render() {
       return (
-          <div>
+          <Container>
               <h1>React Todo App</h1>
               <TodoForm onTodoSubmit={this.addTodo} />
               <TodoList todoList={this.state.todoList} removeTodo={this.removeTodo} />
-          </div>
+          </Container>
       );
   }
 }
